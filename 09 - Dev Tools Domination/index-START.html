@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+    const p = document.querySelector('p');
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log('hello workd');
+
+    // Interpolated
+    console.log('hello there %s string!','💩')
+
+    // Styled
+    console.log('%c this is text','color: red; font-size: 20px;')
+
+    // warning!
+    console.warn('this is a waring ')
+
+    // Error :|
+    console.error('this is an error');
+
+    // Info
+    console.info('this log the important info in console')
+
+    // Testing
+    console.assert(1 == 2,'this is to assert something')
+
+    // clearing
+    console.clear()
+
+    // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
+    console.clear()
+
+
+    // Grouping together
+    dogs.forEach(dog =>{
+      console.groupCollapsed(`${dog.name}`)
+      console.log(`${dog.age}`)
+      console.groupEnd(`${dog.name}`)
+    })
+
+
+    // counting
+    console.count('sujal')
+    console.count('sujal')
+    console.count('kirti')
+    console.count('sujal')
+    console.count('kirti')
+    console.count('kirti')
+    
+    console.countReset('kirti')
+    console.countReset('sujal')
+
+    console.count('kirti')
+    console.count('kirti')
+    console.count('sujal')
+    console.count('sujal')
+    console.count('kirti')
+
+
+    // timing
+    console.time()
+    console.log('hello world')
+    console.log('hello world')
+    console.log('hello world')
+    console.log('hello world')
+    console.log('hello world')
+    console.log('hello world')
+    console.timeEnd()
+
+
+
+
+  </script>
+</body>
+</html>
